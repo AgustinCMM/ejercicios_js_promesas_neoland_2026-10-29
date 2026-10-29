@@ -78,7 +78,8 @@ Estructura de referencia:
     │   ├── css/
     │   │   └── styles.css
     │   └── js/
-    │       └── script.js
+    │       ├── script.js
+    │       └── functions.js
     └── ...
 
 Usar el número original en el nombre de la carpeta cuando exista. No renumerar para llenar huecos. Si no hay número original, elegir un identificador técnico estable y mantener visible el título original.
@@ -131,11 +132,11 @@ No añadir tips, pistas, algoritmos, pseudocódigo orientado a la solución ni r
 
 ## Archivos JavaScript de los ejercicios
 
-Crear un archivo JavaScript independiente por ejercicio.
+Crear dos archivos JavaScript independientes por ejercicio: `script.js` para la solución y `functions.js` para las funciones auxiliares.
 
 Los archivos nuevos deben ser plantillas vacías, con un comentario breve que identifique dónde escribir la solución. No incluir funciones de ejemplo, cálculos, pruebas con respuestas conocidas ni código que resuelva total o parcialmente el ejercicio.
 
-Enlazar los scripts al final del `<body>`, justo antes de su cierre. Usar `type="module"` cuando el ejercicio o el proyecto necesite `import`/`export`; no quitar ese atributo para evitar errores de carga.
+Enlazar `script.js` al final del `<body>`, justo antes de su cierre, con `type="module"` en todos los ejercicios. Cuando la solución use `functions.js`, importarlo desde `script.js`; no quitar el atributo para evitar errores de carga.
 
 Usar rutas relativas correctas. Comprobar cómo se ejecutarán los módulos en el navegador elegido. Los navegadores suelen bloquear módulos ES al abrir archivos directamente con `file://`; en ese caso, usar el servidor estático ya previsto por el usuario, como Live Server, y explicar este requisito en el README.
 

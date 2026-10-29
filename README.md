@@ -19,6 +19,7 @@ Los ejercicios 1–10 y 51 tienen títulos explícitos. Para las tarjetas de los
 - ejercicio-XX/index.html: consigna, seguimiento, área de resultados y navegación.
 - ejercicio-XX/css/styles.css: hoja CSS independiente del ejercicio.
 - ejercicio-XX/js/script.js: plantilla independiente para escribir la solución.
+- ejercicio-XX/js/functions.js: plantilla independiente para las funciones auxiliares.
 - Repaso promesas.docx: documento fuente, conservado sin cambios.
 
 ## Abrir el proyecto
@@ -27,11 +28,13 @@ Los ejercicios 1–10 y 51 tienen títulos explícitos. Para las tarjetas de los
 2. Abre index.html y ejecútalo con Live Server.
 3. Usa las tarjetas para abrir ejercicios. En cada página, los controles permiten ir al ejercicio anterior o siguiente y volver al índice.
 
-Se recomienda Live Server para que las rutas relativas y el almacenamiento del navegador funcionen bajo un origen local estable. Las plantillas actuales no usan import ni export; si una solución futura incorpora módulos ES, debe abrirse mediante Live Server y no directamente con file://.
+Live Server es necesario: todos los `script.js` de los ejercicios se cargan como módulos ES (`type="module"`) y los navegadores bloquean los módulos al abrir los archivos directamente con `file://`. El script compartido `assets/js/main.js` sigue siendo un script clásico.
 
 ## Dónde escribir y consultar resultados
 
 Escribe cada solución en el script.js de su carpeta ejercicio-XX. Cada archivo nuevo contiene únicamente un comentario para señalar dónde empezar.
+
+Cada ejercicio incluye además un functions.js con la misma plantilla vacía, destinado a las funciones auxiliares. Si la solución no las necesita, el archivo puede quedar sin usar o eliminarse. Cuando se use, sus funciones se exportan y se importan desde script.js.
 
 Cada página dispone de un área de resultados. La indicación «(ver en consola)» aparece dentro de esa área, salvo que la consigna requiera mostrar el resultado en pantalla, en el DOM o mediante elementos HTML. Cuando aparezca la indicación, consulta la consola de herramientas de desarrollo del navegador.
 
