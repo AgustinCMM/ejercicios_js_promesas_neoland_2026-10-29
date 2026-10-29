@@ -34,7 +34,7 @@
           </header>
 
           <section class="prompt-block" aria-labelledby="prompt-heading">
-                        <div class="prompt-heading-row">
+            <div class="prompt-heading-row">
               <h2 id="prompt-heading">Consigna</h2>
               <button
                 class="status-toggle"
@@ -47,26 +47,27 @@
                 <span class="completion-state" data-current-status>Pendiente</span>
               </button>
             </div>
-              <p class="source-tip">Único Tip: Recuerda NO escribir varias líneas de código (ni resolver todo de golpe) antes de probar cada pequeño paso. Haz una cosa, pon un console.log, pruébalo y, solo si funciona y hace lo que esperas, pasa a la siguiente. Divide y vencerás.</p>
-              <p class="prompt-copy">Variables de entrada (Estado inicial del sistema):</p>
-              <p class="code-label">JavaScript</p>
-              <pre class="source-code"><code>let temperaturaCore = 1000;
+            <p class="source-tip">Único Tip: Recuerda NO escribir varias líneas de código (ni resolver todo de golpe) antes de probar cada pequeño paso. Haz una cosa, pon un console.log, pruébalo y, solo si funciona y hace lo que esperas, pasa a la siguiente. Divide y vencerás.</p>
+            <p class="prompt-copy">Variables de entrada (Estado inicial del sistema):</p>
+            <p class="code-label">JavaScript</p>
+            <pre class="source-code"><code>let temperaturaCore = 1000;
 let barrasDeControl = [&quot;fallo&quot;, &quot;fallo&quot;, &quot;ok&quot;, &quot;fallo&quot;, &quot;fallo&quot;];
 let energiaAuxiliar = false;
 let tiempoLimite = 3000; // Tienes exactamente 3 segundos.</code></pre>
-              <p class="prompt-copy">Objetivo: Debes construir una función llamada async function protocoloRescate() que interactúe con las variables de entrada respetando estrictamente las siguientes leyes físicas del reactor:</p>
-              <ol class="source-list">
-                <li>Enfriamiento: La temperatura del núcleo solo puede descender 100 grados cada 200ms de forma continua. Se considera &quot;estable&quot; únicamente cuando llega a 500 o menos.</li>
-                <li>Inserción de Barras: No puedes probar todas las barras al mismo tiempo. Debes intentar insertarlas secuencialmente (una por una). El mecanismo tarda 300ms en probar cada barra. En el instante en que encuentres la que dice &quot;ok&quot;, debes detener la búsqueda.</li>
-                <li>Energía: Solo cuando la temperatura sea estable y la barra correcta esté insertada, puedes encender la energiaAuxiliar (pasarla a true). Este proceso de encendido tarda exactamente 1000ms.</li>
-              </ol>
-              <p class="prompt-copy output-heading">Output Esperado:</p>
-              <ul class="source-list">
-                <li>Si lo logras a tiempo: Si consigues completar toda la secuencia de rescate antes de que se acabe el tiempoLimite, la función debe resolverse retornando exactamente este string: &quot;🌍 Protocolo completado. El mundo está a salvo.&quot;</li>
-                <li>Si el tiempo se agota: Si el reloj de la planta alcanza los 3000ms y tu código aún está enfriando, probando barras o encendiendo la energía, la función debe ser rechazada inmediatamente (cayendo en un .catch()) devolviendo el string: &quot;💥 KABOOM: El reactor ha explotado&quot;.</li>
-              </ul>
+            <p class="prompt-copy">Objetivo: Debes construir una función llamada async function protocoloRescate() que interactúe con las variables de entrada respetando estrictamente las siguientes leyes físicas del reactor:</p>
+            <ol class="source-list">
+              <li>Enfriamiento: La temperatura del núcleo solo puede descender 100 grados cada 200ms de forma continua. Se considera &quot;estable&quot; únicamente cuando llega a 500 o menos.</li>
+              <li>Inserción de Barras: No puedes probar todas las barras al mismo tiempo. Debes intentar insertarlas secuencialmente (una por una). El mecanismo tarda 300ms en probar cada barra. En el instante en que encuentres la que dice &quot;ok&quot;, debes detener la búsqueda.</li>
+              <li>Energía: Solo cuando la temperatura sea estable y la barra correcta esté insertada, puedes encender la energiaAuxiliar (pasarla a true). Este proceso de encendido tarda exactamente 1000ms.</li>
+            </ol>
+            <p class="prompt-copy output-heading">Output Esperado:</p>
+            <ul class="source-list">
+              <li>Si lo logras a tiempo: Si consigues completar toda la secuencia de rescate antes de que se acabe el tiempoLimite, la función debe resolverse retornando exactamente este string: &quot;🌍 Protocolo completado. El mundo está a salvo.&quot;</li>
+              <li>Si el tiempo se agota: Si el reloj de la planta alcanza los 3000ms y tu código aún está enfriando, probando barras o encendiendo la energía, la función debe ser rechazada inmediatamente (cayendo en un .catch()) devolviendo el string: &quot;💥 KABOOM: El reactor ha explotado&quot;.</li>
+            </ul>
           </section>
-<section class="result-block" aria-labelledby="result-heading">
+
+          <section class="result-block" aria-labelledby="result-heading">
             <h2 id="result-heading">Resultados</h2>
             <div
               class="result-surface"

@@ -255,7 +255,11 @@ button {
 }
 
 .index-heading {
-  padding: 6px 2px 0;
+  padding: 18px 22px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: var(--paper);
+  box-shadow: var(--shadow);
 }
 
 .index-heading h2,
