@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f5f8">
+    <title>Ejercicio 51 · &quot;Protocolo de Autodestrucción del Reactor&quot; — Repaso de Promesas</title>
+    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body data-page-type="exercise" data-exercise-id="51">
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <div class="site-shell">
+      <header class="site-header shell">
+        <a class="brand" href="../index.html" aria-label="Volver al índice">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <span>Práctica de JavaScript</span>
+        </a>
+        <nav class="top-nav" aria-label="Navegación principal">
+          <a class="header-tag" href="../index.html">Índice</a>
+          <span class="current-page" aria-current="page">Ejercicio 51</span>
+        </nav>
+      </header>
+
+      <main id="main-content" class="shell exercise-layout">
+        <article class="exercise-panel">
+          <header class="exercise-heading">
+            <p class="eyebrow">Bloque 6: El Jefe Final (Mentalidad Resolutiva Extrema)</p>
+            <h1>
+              <span class="exercise-number">Ejercicio 51</span>
+              <span class="exercise-title">&quot;Protocolo de Autodestrucción del Reactor&quot;</span>
+            </h1>
+          </header>
+
+          <section class="prompt-block" aria-labelledby="prompt-heading">
+                        <div class="prompt-heading-row">
+              <h2 id="prompt-heading">Consigna</h2>
+              <button
+                class="status-toggle"
+                type="button"
+                data-status-toggle
+                data-exercise-id="51"
+                aria-label="Cambiar estado a resuelto"
+                aria-pressed="false"
+              >
+                <span class="completion-state" data-current-status>Pendiente</span>
+              </button>
+            </div>
+              <p class="source-tip">Único Tip: Recuerda NO escribir varias líneas de código (ni resolver todo de golpe) antes de probar cada pequeño paso. Haz una cosa, pon un console.log, pruébalo y, solo si funciona y hace lo que esperas, pasa a la siguiente. Divide y vencerás.</p>
+              <p class="prompt-copy">Variables de entrada (Estado inicial del sistema):</p>
+              <p class="code-label">JavaScript</p>
+              <pre class="source-code"><code>let temperaturaCore = 1000;
+let barrasDeControl = [&quot;fallo&quot;, &quot;fallo&quot;, &quot;ok&quot;, &quot;fallo&quot;, &quot;fallo&quot;];
+let energiaAuxiliar = false;
+let tiempoLimite = 3000; // Tienes exactamente 3 segundos.</code></pre>
+              <p class="prompt-copy">Objetivo: Debes construir una función llamada async function protocoloRescate() que interactúe con las variables de entrada respetando estrictamente las siguientes leyes físicas del reactor:</p>
+              <ol class="source-list">
+                <li>Enfriamiento: La temperatura del núcleo solo puede descender 100 grados cada 200ms de forma continua. Se considera &quot;estable&quot; únicamente cuando llega a 500 o menos.</li>
+                <li>Inserción de Barras: No puedes probar todas las barras al mismo tiempo. Debes intentar insertarlas secuencialmente (una por una). El mecanismo tarda 300ms en probar cada barra. En el instante en que encuentres la que dice &quot;ok&quot;, debes detener la búsqueda.</li>
+                <li>Energía: Solo cuando la temperatura sea estable y la barra correcta esté insertada, puedes encender la energiaAuxiliar (pasarla a true). Este proceso de encendido tarda exactamente 1000ms.</li>
+              </ol>
+              <p class="prompt-copy output-heading">Output Esperado:</p>
+              <ul class="source-list">
+                <li>Si lo logras a tiempo: Si consigues completar toda la secuencia de rescate antes de que se acabe el tiempoLimite, la función debe resolverse retornando exactamente este string: &quot;🌍 Protocolo completado. El mundo está a salvo.&quot;</li>
+                <li>Si el tiempo se agota: Si el reloj de la planta alcanza los 3000ms y tu código aún está enfriando, probando barras o encendiendo la energía, la función debe ser rechazada inmediatamente (cayendo en un .catch()) devolviendo el string: &quot;💥 KABOOM: El reactor ha explotado&quot;.</li>
+              </ul>
+          </section>
+<section class="result-block" aria-labelledby="result-heading">
+            <h2 id="result-heading">Resultados</h2>
+            <div
+              class="result-surface"
+              id="result-area"
+              aria-live="polite"
+            >
+              <p class="console-note">(ver en consola)</p>
+            </div>
+          </section>
+        </article>
+
+        <nav class="exercise-pager" aria-label="Navegación entre ejercicios">
+          <a class="pager-link" href="../ejercicio-50/index.html"><span aria-hidden="true">←</span> Ejercicio 50</a>
+          <a class="pager-link home-link" href="../index.html">Volver al índice</a>
+          <span class="pager-placeholder" aria-hidden="true"></span>
+        </nav>
+        <div id="app-notice" class="notice" role="status" aria-live="polite" hidden></div>
+      </main>
+
+      <footer class="site-footer shell">
+        <p>Ejercicio de práctica de Promesas en JavaScript.</p>
+      </footer>
+    </div>
+    <script src="../assets/js/main.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

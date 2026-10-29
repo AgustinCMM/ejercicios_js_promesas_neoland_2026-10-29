@@ -1,0 +1,1025 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f5f8">
+    <title>Repaso de Promesas en JavaScript</title>
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="stylesheet" href="assets/css/styles.css">
+  </head>
+  <body data-page-type="index">
+    <a class="skip-link" href="#main-content">Saltar al contenido</a>
+    <div class="site-shell">
+      <header class="site-header shell">
+        <a class="brand" href="index.html" aria-label="Inicio de Repaso de Promesas">
+          <span class="brand-mark" aria-hidden="true">P</span>
+          <span>Práctica de JavaScript</span>
+        </a>
+        <span class="header-tag">Promesas</span>
+      </header>
+
+      <main id="main-content" class="shell">
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">JavaScript · Ejercicios</p>
+            <h1>Repaso de Promesas</h1>
+            <p class="hero-description">
+              Un entorno para consultar las consignas y desarrollar cada ejercicio en su propio archivo.
+            </p>
+            <a class="primary-link" href="ejercicio-01/index.html">
+              Comenzar por el ejercicio 1
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+          <div class="hero-stat" aria-label="51 ejercicios organizados en 6 bloques">
+            <span class="stat-number">51</span>
+            <span class="stat-label">ejercicios en 6 bloques</span>
+          </div>
+        </section>
+
+        <div id="app-notice" class="notice" role="status" aria-live="polite" hidden></div>
+
+        <section id="ejercicios" class="index-content" aria-labelledby="index-title">
+          <div class="index-heading">
+            <div>
+              <p class="eyebrow">Índice original</p>
+              <h2 id="index-title">Todos los ejercicios</h2>
+            </div>
+            <p class="index-note">Orden y numeración del documento fuente</p>
+          </div>
+        <section
+          class="exercise-group"
+          aria-labelledby="bloque-1-title"
+        >
+          <div class="group-heading">
+            <div>
+              <p class="eyebrow">Bloque 1</p>
+              <h2 id="bloque-1-title">Nivel 1: Conceptos Básicos (Con Tips)</h2>
+            </div>
+            <span class="group-count">10 ejercicios</span>
+          </div>
+          <div class="exercise-grid">
+            <a
+              class="exercise-card"
+              href="ejercicio-01/index.html"
+              data-exercise-card
+              data-exercise-id="01"
+              aria-label="Abrir Ejercicio 1: Crear una promesa simple:"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 1</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Crear una promesa simple:</span>
+              <span class="card-description">Crea una función async llamada saludar que retorne &quot;Hola&quot;.Tip: Antepón la palabra async a la declaración de la función.</span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-02/index.html"
+              data-exercise-card
+              data-exercise-id="02"
+              aria-label="Abrir Ejercicio 2: Consumir con then:"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 2</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Consumir con then:</span>
+              <span class="card-description">Llama a la función saludar y muestra su resultado en consola usando .then().Tip: saludar().then((resultado) =&gt; console.log(resultado)).</span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-03/index.html"
+              data-exercise-card
+              data-exercise-id="03"
+              aria-label="Abrir Ejercicio 3: Consumir con await:"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 3</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Consumir con await:</span>
+              <span class="card-description">Llama a la función saludar y muestra su resultado usando await.Tip: Recuerda que el await va antes de la llamada a la función.</span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-04/index.html"
+              data-exercise-card
+              data-exercise-id="04"
+              aria-label="Abrir Ejercicio 4: Promesa rechazada:"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 4</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Promesa rechazada:</span>
+              <span class="card-description">Crea una función que retorne directamente Promise.reject(&quot;Error fatal&quot;).Tip: Usa el objeto global Promise y su método estático .reject().</span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-05/index.html"
+              data-exercise-card
+              data-exercise-id="05"
+              aria-label="Abrir Ejercicio 5: Atrapar el rechazo:"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 5</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Atrapar el rechazo:</span>
+              <span class="card-description">Llama a la promesa del ejercicio 4 y atrapa el error con .catch().Tip: Concatena .catch((error) =&gt; console.log(error)) después de la llamada.</span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-06/index.html"
+              data-exercise-card
+              data-exercise-id="06"
+              aria-label="Abrir Ejercicio 6: Retraso simple:"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 6</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Retraso simple:</span>
+              <span class="card-description">Crea un setTimeout que imprima &quot;Listo&quot; después de 2 segundos.Tip: El tiempo se mide en milisegundos (2 segundos = 2000 ms).</span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-07/index.html"
+              data-exercise-card
+              data-exercise-id="07"
+              aria-label="Abrir Ejercicio 7: Intervalo simple:"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 7</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Intervalo simple:</span>
+              <span class="card-description">Crea un setInterval que imprima &quot;Tic&quot; cada medio segundo.Tip: Medio segundo equivale a 500 milisegundos.</span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-08/index.html"
+              data-exercise-card
+              data-exercise-id="08"
+              aria-label="Abrir Ejercicio 8: Detener el tiempo:"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 8</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Detener el tiempo:</span>
+              <span class="card-description">Guarda el intervalo anterior en una variable y detenlo usando clearInterval.Tip: let miIntervalo = setInterval(...), luego clearInterval(miIntervalo).</span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-09/index.html"
+              data-exercise-card
+              data-exercise-id="09"
+              aria-label="Abrir Ejercicio 9: Retornar Promesa manual:"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 9</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Retornar Promesa manual:</span>
+              <span class="card-description">Crea una función que retorne un new Promise((resolve, reject) =&gt; { resolve(5) }).Tip: No necesitas async si ya estás retornando explícitamente el objeto new Promise.</span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-10/index.html"
+              data-exercise-card
+              data-exercise-id="10"
+              aria-label="Abrir Ejercicio 10: Encadenamiento básico:"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 10</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Encadenamiento básico:</span>
+              <span class="card-description">Llama a la promesa del ejercicio 9 y en su .then() suma 5 al resultado antes de imprimirlo.Tip: Dentro del .then((num) =&gt; ... ) haz la operación matemática.</span>
+            </a>
+          </div>
+        </section>
+        <section
+          class="exercise-group"
+          aria-labelledby="bloque-11-title"
+        >
+          <div class="group-heading">
+            <div>
+              <p class="eyebrow">Bloque 2</p>
+              <h2 id="bloque-11-title">Nivel 2: Manejo de Errores y Tiempos</h2>
+            </div>
+            <span class="group-count">10 ejercicios</span>
+          </div>
+          <div class="exercise-grid">
+            <a
+              class="exercise-card"
+              href="ejercicio-11/index.html"
+              data-exercise-card
+              data-exercise-id="11"
+              aria-label="Abrir Ejercicio 11: Ejercicio 11"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 11</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 11</span>
+              <span class="card-description">
+                Crea una funci&#243;n async que lance un error intencionalmente usando throw new
+              Error(&quot;Fallo&quot;).
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-12/index.html"
+              data-exercise-card
+              data-exercise-id="12"
+              aria-label="Abrir Ejercicio 12: Ejercicio 12"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 12</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 12</span>
+              <span class="card-description">
+                Ejecuta la funci&#243;n del ejercicio 11 dentro de un bloque try...catch e imprime el
+              mensaje del error.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-13/index.html"
+              data-exercise-card
+              data-exercise-id="13"
+              aria-label="Abrir Ejercicio 13: Ejercicio 13"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 13</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 13</span>
+              <span class="card-description">
+                Crea una funci&#243;n que retorne una promesa usando new Promise. Haz que se rechace
+              inmediatamente con el mensaje &quot;No hay saldo&quot;.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-14/index.html"
+              data-exercise-card
+              data-exercise-id="14"
+              aria-label="Abrir Ejercicio 14: Ejercicio 14"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 14</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 14</span>
+              <span class="card-description">
+                Consume la promesa del ejercicio 13 usando .then() (dej&#225;ndolo vac&#237;o o con un log)
+              y .catch() para atrapar el error.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-15/index.html"
+              data-exercise-card
+              data-exercise-id="15"
+              aria-label="Abrir Ejercicio 15: Ejercicio 15"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 15</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 15</span>
+              <span class="card-description">
+                Envuelve un setTimeout dentro de una promesa. Haz que la promesa se resuelva con
+              &quot;Tiempo terminado&quot; despu&#233;s de 1 segundo.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-16/index.html"
+              data-exercise-card
+              data-exercise-id="16"
+              aria-label="Abrir Ejercicio 16: Ejercicio 16"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 16</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 16</span>
+              <span class="card-description">
+                Crea un ciclo for que imprima n&#250;meros del 1 al 3, pero usa un await con la promesa del
+              ejercicio 15 para pausar cada iteraci&#243;n 1 segundo.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-17/index.html"
+              data-exercise-card
+              data-exercise-id="17"
+              aria-label="Abrir Ejercicio 17: Ejercicio 17"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 17</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 17</span>
+              <span class="card-description">
+                Escribe una funci&#243;n que reciba un string. Si el string est&#225; vac&#237;o, retorna
+              una promesa rechazada. Si tiene texto, retorna una promesa resuelta con el string en
+              may&#250;sculas.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-18/index.html"
+              data-exercise-card
+              data-exercise-id="18"
+              aria-label="Abrir Ejercicio 18: Ejercicio 18"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 18</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 18</span>
+              <span class="card-description">
+                Ejecuta la funci&#243;n anterior pasando un string vac&#237;o usando try...catch.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-19/index.html"
+              data-exercise-card
+              data-exercise-id="19"
+              aria-label="Abrir Ejercicio 19: Ejercicio 19"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 19</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 19</span>
+              <span class="card-description">
+                Ejecuta la funci&#243;n del ejercicio 17 pasando &quot;hola&quot; y encadena dos .then(). El
+              primero recibe el texto y el segundo imprime su longitud.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-20/index.html"
+              data-exercise-card
+              data-exercise-id="20"
+              aria-label="Abrir Ejercicio 20: Ejercicio 20"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 20</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 20</span>
+              <span class="card-description">
+                Usa Promise.resolve(&quot;&#201;xito&quot;) y obl&#237;galo a fallar encadenando un .then()
+              que lance un throw &quot;Error inesperado&quot;, atrap&#225;ndolo al final con un .catch().
+              </span>
+            </a>
+          </div>
+        </section>
+        <section
+          class="exercise-group"
+          aria-labelledby="bloque-21-title"
+        >
+          <div class="group-heading">
+            <div>
+              <p class="eyebrow">Bloque 3</p>
+              <h2 id="bloque-21-title">Nivel 3: Lógica Condicional en Promesas (El &quot;Te lo prometo&quot;)</h2>
+            </div>
+            <span class="group-count">10 ejercicios</span>
+          </div>
+          <div class="exercise-grid">
+            <a
+              class="exercise-card"
+              href="ejercicio-21/index.html"
+              data-exercise-card
+              data-exercise-id="21"
+              aria-label="Abrir Ejercicio 21: Ejercicio 21"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 21</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 21</span>
+              <span class="card-description">
+                Crea la funci&#243;n verificarEdad(edad). Retorna una promesa que se resuelve con
+              &quot;Pase&quot; si es mayor o igual a 18, y se rechaza con &quot;Fuera&quot; si es menor.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-22/index.html"
+              data-exercise-card
+              data-exercise-id="22"
+              aria-label="Abrir Ejercicio 22: Ejercicio 22"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 22</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 22</span>
+              <span class="card-description">
+                Crea comprarCoche(ahorros). Si ahorros es mayor a 5000, resuelve un objeto { coche:
+              &quot;Usado&quot;, restante: ahorros - 5000 }. Si no, rechaza.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-23/index.html"
+              data-exercise-card
+              data-exercise-id="23"
+              aria-label="Abrir Ejercicio 23: Ejercicio 23"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 23</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 23</span>
+              <span class="card-description">
+                Crea simularLanzamientoMoneda(). Usa Math.random(). Si es mayor a 0.5, resuelve
+              &quot;Cara&quot;. Si no, rechaza &quot;Cruz&quot;.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-24/index.html"
+              data-exercise-card
+              data-exercise-id="24"
+              aria-label="Abrir Ejercicio 24: Ejercicio 24"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 24</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 24</span>
+              <span class="card-description">
+                Consume simularLanzamientoMoneda() 3 veces seguidas usando async/await y bloques try/catch
+              independientes.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-25/index.html"
+              data-exercise-card
+              data-exercise-id="25"
+              aria-label="Abrir Ejercicio 25: Ejercicio 25"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 25</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 25</span>
+              <span class="card-description">
+                Modifica teLoPrometo de tu ejemplo para que reciba dos par&#225;metros: dinero (booleano) y
+              cantidad. Si hay dinero, resuelve: &quot;Te pago [cantidad]&quot;.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-26/index.html"
+              data-exercise-card
+              data-exercise-id="26"
+              aria-label="Abrir Ejercicio 26: Ejercicio 26"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 26</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 26</span>
+              <span class="card-description">
+                Crea una funci&#243;n que verifique un array. Si el array tiene menos de 3 elementos,
+              rechaza la promesa. Si tiene m&#225;s, resu&#233;lvela devolviendo el &#250;ltimo elemento.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-27/index.html"
+              data-exercise-card
+              data-exercise-id="27"
+              aria-label="Abrir Ejercicio 27: Ejercicio 27"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 27</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 27</span>
+              <span class="card-description">
+                Crea una promesa que eval&#250;e si un n&#250;mero es par. Si es par, se resuelve en 1
+              segundo. Si es impar, se rechaza inmediatamente.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-28/index.html"
+              data-exercise-card
+              data-exercise-id="28"
+              aria-label="Abrir Ejercicio 28: Ejercicio 28"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 28</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 28</span>
+              <span class="card-description">
+                Crea una funci&#243;n de login as&#237;ncrona que reciba usuario y password. Solo resuelve
+              si son &quot;admin&quot; y &quot;1234&quot;, de lo contrario rechaza.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-29/index.html"
+              data-exercise-card
+              data-exercise-id="29"
+              aria-label="Abrir Ejercicio 29: Ejercicio 29"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 29</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 29</span>
+              <span class="card-description">
+                Llama a la funci&#243;n de login. Si falla (catch), vuelve a llamar a la funci&#243;n
+              internamente con credenciales correctas como &quot;reintento&quot;.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-30/index.html"
+              data-exercise-card
+              data-exercise-id="30"
+              aria-label="Abrir Ejercicio 30: Ejercicio 30"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 30</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 30</span>
+              <span class="card-description">
+                Crea una promesa que inicie un setInterval. Si un contador interno llega a 5, debe resolver
+              la promesa y limpiar el intervalo.
+              </span>
+            </a>
+          </div>
+        </section>
+        <section
+          class="exercise-group"
+          aria-labelledby="bloque-31-title"
+        >
+          <div class="group-heading">
+            <div>
+              <p class="eyebrow">Bloque 4</p>
+              <h2 id="bloque-31-title">Nivel 4: Mentalidad Resolutiva - Básico (Entrada -&gt; Salida)</h2>
+            </div>
+            <span class="group-count">10 ejercicios</span>
+          </div>
+          <div class="exercise-grid">
+            <a
+              class="exercise-card"
+              href="ejercicio-31/index.html"
+              data-exercise-card
+              data-exercise-id="31"
+              aria-label="Abrir Ejercicio 31: Ejercicio 31"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 31</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 31</span>
+              <span class="card-description">
+                Input: base = 5, multiplicador = 3 | Output Esperado: 15
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-32/index.html"
+              data-exercise-card
+              data-exercise-id="32"
+              aria-label="Abrir Ejercicio 32: Ejercicio 32"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 32</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 32</span>
+              <span class="card-description">
+                Input: nombre = &quot;juan&quot; | Output Esperado: &quot;Usuario: JUAN verificado&quot;
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-33/index.html"
+              data-exercise-card
+              data-exercise-id="33"
+              aria-label="Abrir Ejercicio 33: Ejercicio 33"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 33</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 33</span>
+              <span class="card-description">
+                Input: clave = &quot;secreta&quot; | Output Esperado: Error capturado en catch con mensaje:
+              &quot;Clave insegura&quot;
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-34/index.html"
+              data-exercise-card
+              data-exercise-id="34"
+              aria-label="Abrir Ejercicio 34: Ejercicio 34"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 34</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 34</span>
+              <span class="card-description">
+                Input: precio = 100, descuento = true | Output Esperado: 80 (aplicar 20% si es true).
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-35/index.html"
+              data-exercise-card
+              data-exercise-id="35"
+              aria-label="Abrir Ejercicio 35: Ejercicio 35"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 35</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 35</span>
+              <span class="card-description">
+                Input: numeros = [1, 2, 3] | Output Esperado: 6 (la sumatoria).
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-36/index.html"
+              data-exercise-card
+              data-exercise-id="36"
+              aria-label="Abrir Ejercicio 36: Ejercicio 36"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 36</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 36</span>
+              <span class="card-description">
+                Input: estado = false | Output Esperado: Error: &quot;Operaci&#243;n cancelada por el
+              usuario&quot;
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-37/index.html"
+              data-exercise-card
+              data-exercise-id="37"
+              aria-label="Abrir Ejercicio 37: Ejercicio 37"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 37</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 37</span>
+              <span class="card-description">
+                Input: stock = 0, pedido = 5 | Output Esperado: Error: &quot;Faltan 5 unidades&quot;
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-38/index.html"
+              data-exercise-card
+              data-exercise-id="38"
+              aria-label="Abrir Ejercicio 38: Ejercicio 38"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 38</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 38</span>
+              <span class="card-description">
+                Input: palabra = &quot;reconocer&quot; | Output Esperado: &quot;Es un pal&#237;ndromo&quot;
+              (o lanzar error si no lo fuera).
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-39/index.html"
+              data-exercise-card
+              data-exercise-id="39"
+              aria-label="Abrir Ejercicio 39: Ejercicio 39"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 39</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 39</span>
+              <span class="card-description">
+                Input: a = 10, b = 0 | Output Esperado: Error: &quot;No se puede dividir por cero&quot;
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-40/index.html"
+              data-exercise-card
+              data-exercise-id="40"
+              aria-label="Abrir Ejercicio 40: Ejercicio 40"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 40</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 40</span>
+              <span class="card-description">
+                Input: objeto = { nombre: &quot;Ana&quot;, rol: &quot;admin&quot; } | Output Esperado:
+              &quot;Bienvenida administradora&quot; (Lanzar error si no es admin).
+              </span>
+            </a>
+          </div>
+        </section>
+        <section
+          class="exercise-group"
+          aria-labelledby="bloque-41-title"
+        >
+          <div class="group-heading">
+            <div>
+              <p class="eyebrow">Bloque 5</p>
+              <h2 id="bloque-41-title">Nivel 5: Mentalidad Resolutiva - Avanzado (Tiempos y Flujos Dinámicos)</h2>
+            </div>
+            <span class="group-count">10 ejercicios</span>
+          </div>
+          <div class="exercise-grid">
+            <a
+              class="exercise-card"
+              href="ejercicio-41/index.html"
+              data-exercise-card
+              data-exercise-id="41"
+              aria-label="Abrir Ejercicio 41: Ejercicio 41"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 41</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 41</span>
+              <span class="card-description">
+                Input: mensaje = &quot;Hola&quot;, tiempoMs = 2000Output Esperado: Imprimir &quot;Hola&quot;
+              en consola exactamente 2 segundos despu&#233;s de llamar a la funci&#243;n.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-42/index.html"
+              data-exercise-card
+              data-exercise-id="42"
+              aria-label="Abrir Ejercicio 42: Ejercicio 42"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 42</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 42</span>
+              <span class="card-description">
+                Input: usuarioId = 101Output Esperado: Retornar un objeto { id: 101, plan:
+              &quot;Premium&quot; } simulando un retraso de red de 1.5 segundos.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-43/index.html"
+              data-exercise-card
+              data-exercise-id="43"
+              aria-label="Abrir Ejercicio 43: Ejercicio 43"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 43</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 43</span>
+              <span class="card-description">
+                Input: saldo = 50, costoCompra = 100Output Esperado: Tras 1 segundo evaluando, la promesa
+              debe caer en el catch devolviendo el n&#250;mero -50 (el d&#233;ficit).
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-44/index.html"
+              data-exercise-card
+              data-exercise-id="44"
+              aria-label="Abrir Ejercicio 44: Ejercicio 44"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 44</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 44</span>
+              <span class="card-description">
+                Input: array = [10, 20, &quot;treinta&quot;, 40]Output Esperado: Tras recorrer el array,
+              debe ir por el .catch() con el mensaje &quot;Tipo de dato inv&#225;lido detectado en la
+              posici&#243;n 2&quot;.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-45/index.html"
+              data-exercise-card
+              data-exercise-id="45"
+              aria-label="Abrir Ejercicio 45: Ejercicio 45"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 45</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 45</span>
+              <span class="card-description">
+                Input: servidorActivo = true, token = &quot;&quot;Output Esperado: Primero verificar el
+              servidor (demora 500ms). Si est&#225; activo, verificar el token (demora 500ms). Resultado
+              final (catch): &quot;Token ausente&quot;.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-46/index.html"
+              data-exercise-card
+              data-exercise-id="46"
+              aria-label="Abrir Ejercicio 46: Ejercicio 46"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 46</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 46</span>
+              <span class="card-description">
+                Input: temperatura = 100Output Esperado: Crear un intervalo que reste 10 a la temperatura
+              cada 100ms. La promesa se resuelve devolviendo &quot;Temperatura segura&quot; cuando llegue
+              a 50.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-47/index.html"
+              data-exercise-card
+              data-exercise-id="47"
+              aria-label="Abrir Ejercicio 47: Ejercicio 47"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 47</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 47</span>
+              <span class="card-description">
+                Input: intentos = 3Output Esperado: Una funci&#243;n que simule tirar un dado (retraso
+              200ms). Si sale 6, resuelve &quot;&#161;Ganaste!&quot;. Si falla, resta un intento y vuelve
+              a llamarse a s&#237; misma de forma as&#237;ncrona. Si intentos llega a 0, rechaza
+              &quot;Perdiste&quot;.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-48/index.html"
+              data-exercise-card
+              data-exercise-id="48"
+              aria-label="Abrir Ejercicio 48: Ejercicio 48"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 48</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 48</span>
+              <span class="card-description">
+                Input: archivos = [&quot;file1.txt&quot;, &quot;file2.jpg&quot;]Output Esperado: Simular una
+              subida (resoluci&#243;n de promesa) que tarde 1 segundo por cada archivo. Output final:
+              &quot;2 archivos subidos en 2000ms&quot;.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-49/index.html"
+              data-exercise-card
+              data-exercise-id="49"
+              aria-label="Abrir Ejercicio 49: Ejercicio 49"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 49</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 49</span>
+              <span class="card-description">
+                Input: carrito = [{precio: 10}, {precio: 20}], aplicarImpuesto = trueOutput Esperado:
+              Retraso de 1 segundo para sumar el carrito, seguido de un retraso de 500ms para calcular
+              impuestos (+21%). Output: 36.3.
+              </span>
+            </a>
+            <a
+              class="exercise-card"
+              href="ejercicio-50/index.html"
+              data-exercise-card
+              data-exercise-id="50"
+              aria-label="Abrir Ejercicio 50: Ejercicio 50"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 50</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">Ejercicio 50</span>
+              <span class="card-description">
+                Input: codigoAcceso = &quot;X79&quot;Output Esperado: Si el c&#243;digo empieza por
+              &quot;X&quot;, espera 3 segundos y resuelve &quot;Acceso nivel X concedido&quot;. Cualquier
+              otra letra rechaza inmediatamente sin esperar.
+              </span>
+            </a>
+          </div>
+        </section>
+        <section
+          class="exercise-group"
+          aria-labelledby="bloque-51-title"
+        >
+          <div class="group-heading">
+            <div>
+              <p class="eyebrow">Bloque 6</p>
+              <h2 id="bloque-51-title">Bloque 6: El Jefe Final (Mentalidad Resolutiva Extrema)</h2>
+            </div>
+            <span class="group-count">1 ejercicios</span>
+          </div>
+          <div class="exercise-grid">
+            <a
+              class="exercise-card"
+              href="ejercicio-51/index.html"
+              data-exercise-card
+              data-exercise-id="51"
+              aria-label="Abrir Ejercicio 51: &quot;Protocolo de Autodestrucci&#243;n del Reactor&quot;"
+            >
+              <span class="card-meta">
+                <span class="exercise-number">Ejercicio 51</span>
+                <span class="status-chip" data-status-label>Estado: Pendiente</span>
+              </span>
+              <span class="card-title">&quot;Protocolo de Autodestrucci&#243;n del Reactor&quot;</span>
+              <span class="card-description">
+                Variables de entrada (Estado inicial del sistema): let temperaturaCore = 1000; let
+              barrasDeControl = [&quot;fallo&quot;, &quot;fallo&quot;, &quot;ok&quot;, &quot;fallo&quot;,
+              &quot;fallo&quot;]; let energiaAuxiliar = false; let tiempoLimite = 3000; // Tienes
+              exactamente 3 segundos. Objetivo: Debes construir una funci&#243;n llamada async function
+              protocoloRescate() que interact&#250;e con las variables de entrada respetando estrictamente
+              las siguientes leyes f&#237;sicas del reactor: Enfriamiento: La temperatura del n&#250;cleo
+              solo puede descender 100 grados cada 200ms de forma continua. Se considera
+              &quot;estable&quot; &#250;nicamente cuando llega a 500 o menos. Inserci&#243;n de Barras: No
+              puedes probar todas las barras al mismo tiempo. Debes intentar insertarlas secuencialmente
+              (una por una). El mecanismo tarda 300ms en probar cada barra. En el instante en que
+              encuentres la que dice &quot;ok&quot;, debes detener la b&#250;squeda. Energ&#237;a: Solo
+              cuando la temperatura sea estable y la barra correcta est&#233; insertada, puedes encender
+              la energiaAuxiliar (pasarla a true). Este proceso de encendido tarda exactamente 1000ms.
+              Output Esperado: Si lo logras a tiempo: Si consigues completar toda la secuencia de rescate
+              antes de que se acabe el tiempoLimite, la funci&#243;n debe resolverse retornando
+              exactamente este string: &quot;&#127757; Protocolo completado. El mundo est&#225; a
+              salvo.&quot; Si el tiempo se agota: Si el reloj de la planta alcanza los 3000ms y tu
+              c&#243;digo a&#250;n est&#225; enfriando, probando barras o encendiendo la energ&#237;a, la
+              funci&#243;n debe ser rechazada inmediatamente (cayendo en un .catch()) devolviendo el
+              string: &quot;&#128165; KABOOM: El reactor ha explotado&quot;.
+              </span>
+            </a>
+          </div>
+        </section>
+        </section>
+
+        <section class="progress-tools" aria-labelledby="progress-tools-title">
+          <div>
+            <p class="eyebrow">En este navegador</p>
+            <h2 id="progress-tools-title">Copia del progreso</h2>
+            <p>Los estados se guardan localmente. Puedes exportarlos a JSON o importar una copia.</p>
+          </div>
+          <div class="progress-actions">
+            <button class="secondary-button" type="button" data-export-progress>
+              Exportar JSON
+            </button>
+            <button class="secondary-button" type="button" data-import-trigger>
+              Importar JSON
+            </button>
+            <input
+              class="visually-hidden"
+              id="progress-file"
+              type="file"
+              accept="application/json,.json"
+              data-import-progress
+              aria-label="Seleccionar archivo JSON de progreso"
+            >
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer shell">
+        <p>Ejercicios de práctica de Promesas en JavaScript.</p>
+      </footer>
+    </div>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
