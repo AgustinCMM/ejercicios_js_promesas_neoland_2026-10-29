@@ -1,5 +1,4 @@
 // Escribe aquí la solución del ejercicio 29.
-// script.js
 import { login } from "./functions.js";
 
 try {
