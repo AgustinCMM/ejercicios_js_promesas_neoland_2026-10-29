@@ -6,5 +6,5 @@ let estado = false;
 try {
     console.log(await evaluarEstado(estado));
 } catch (error) {
-    console.log("Error:", error);
+    console.error("Error:", error);
 }
