@@ -2,7 +2,8 @@
 export function evaluarStock(stock, pedido) {
     return new Promise((resolve, reject) => {
         if (stock < pedido) {
-            reject("Faltan 5 unidades");
+            let unidadesFaltantes = pedido - stock;
+            reject(`Faltan ${unidadesFaltantes} unidades`);
         } else {
             resolve("Unidades dispolnibles");
         }
