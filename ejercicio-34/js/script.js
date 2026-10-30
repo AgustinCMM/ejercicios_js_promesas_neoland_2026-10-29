@@ -2,7 +2,7 @@
 import { aplicarDescuento } from "./functions.js";
 
 let precio = 100;
-let descuento = 0.20;
+let descuento = true;
 
 try {
     console.log(await aplicarDescuento(precio, descuento));
