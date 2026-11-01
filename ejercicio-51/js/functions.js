@@ -16,6 +16,7 @@ export async function protocoloRescate(temperaturaCore, barrasDeControl, energia
         if (resultadoEnfriamiento <= 500 && resultadoBarras == "ok") {
             const estadoEnergia = await encenderEnergiaAuxiliar(energiaAuxiliar, estado);
             console.log(`Energía auxiliar encendida: ${estadoEnergia}`);
+            console.log("🌍 Protocolo completado. El mundo está a salvo.");
         }
     })();
 
